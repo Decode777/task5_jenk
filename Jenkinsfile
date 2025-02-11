@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Decode777/task5_jenk.git'
+                git branch: 'main', url: 'https://github.com/Decode777/task5_jenk.git'
             }
         }
         stage('Build') {
