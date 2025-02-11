@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'javac TimestampPrinter\\src\\main\\java\\TimestampPrinter.java'
+                sh 'javac TimestampPrinter.java'
             }
         }
         stage('Run') {
             steps {
-                bat 'java -cp TimestampPrinter\\src\\main\\java TimestampPrinter'
+                sh 'java TimestampPrinter'
             }
         }
     }
